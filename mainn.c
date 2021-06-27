@@ -2,9 +2,9 @@
 #include"GSM.h"
 #include"LCD.h"
 
-#define NUMBER1 "8074462167"   //Enter the mobile number
-#define NUMBER2 "7674961609"
-#define NUMBER3 "6303355800"
+#define NUMBER1 ".........."   //Enter the mobile number
+#define NUMBER2 ".........."
+#define NUMBER3 ".........."
 
 sbit vib = P3^2;    //initializing the single bits used in the circuit
 sbit buzzer = P0^0;
@@ -43,9 +43,9 @@ void main()
             for(r=0;r<30000;r++);
             comwrt(0x80); //again to set LCD in writing state in first row
             display("SENDING MSG....."); //displaying the message
-            sendSMS(NUMBER1,"VAISH"); //function to send number and name/message as parameters 
-            sendSMS(NUMBER2,"BHUVAN");
-            sendSMS(NUMBER3,"SATHVIKA");
+            sendSMS(NUMBER1,"...."); //function to send number and name/message as parameters 
+            sendSMS(NUMBER2,"....");
+            sendSMS(NUMBER3,"....");
             comwrt(0xC0); //again to set LCD in writing state and to write what GSM module did
             display("    MSG SENT    ");
             for(r=0;r<30000;r++);// for delay
